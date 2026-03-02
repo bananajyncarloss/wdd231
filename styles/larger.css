@@ -1,10 +1,27 @@
 @media only screen and (min-width: 38rem) {
-    header, main, nav, footer {
-        max-width: 900px;
-        margin: 0 auto;
-        grid-template-columns: 24px auto 44px;
-    }
-    .menu-toggle {
-        display: none;
-    }
+    
+    header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  #courses {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 }
