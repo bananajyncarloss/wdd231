@@ -8,7 +8,7 @@ async function getMembers() {
 }
 
 function displayMembers(members) {
-
+    container.innerHTML = "";
     members.forEach(member => {
 
         const card = document.createElement("section");
