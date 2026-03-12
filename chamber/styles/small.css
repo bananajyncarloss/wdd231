@@ -69,18 +69,35 @@ nav a.active {
 
 #members.grid {
 display: grid;
-grid-template-columns: 1fr;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 gap: 1rem;
+}
+
+#members.grid section {
+border: 1px solid #ccc;
 padding: 1rem;
+text-align: center;
+}
+
+#members.grid img {
+width: 100%;
+height: auto;
 }
 
 #members.list {
-display: block;
+display: flex;
+flex-direction: column;
 }
 
-#members section {
-border: 1px solid #ccc;
-padding: 1rem;
+#members.list section {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+padding: 10px;
+border-bottom: 1px solid #ccc;
+}
+
+#members.list img {
+display: none;
 }
 
 /* =======================
