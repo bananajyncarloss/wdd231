@@ -1,5 +1,5 @@
 const spotlightContainer = document.querySelector("#spotlight-container");
-const dataURL = "./data/members.json";
+const dataURL = "data/members.json";
 
 async function loadSpotlights() {
   try {
@@ -8,7 +8,7 @@ async function loadSpotlights() {
 
     const data = await response.json();
 
-    const qualifiedMembers = data.members.filter(
+    const qualifiedMembers = data.filter(
       member => member.membership === 2 || member.membership === 3
     );
 
