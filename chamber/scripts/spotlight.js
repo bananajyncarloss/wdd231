@@ -1,37 +1,43 @@
-const url = "data/members.json";
+const spotlightContainer = document.querySelector("#spotlight-container");
+const dataURL = "./data/members.json";
 
 async function loadSpotlights() {
+  try {
+    const response = await fetch(dataURL);
+    if (!response.ok) throw new Error("Failed to load members");
 
-const response = await fetch(url);
-const data = await response.json();
+    const data = await response.json();
 
-let members = data.members.filter(member =>
-member.membership === "Gold" || member.membership === "Silver"
-);
+    const qualifiedMembers = data.members.filter(
+      member => member.membership === 2 || member.membership === 3
+    );
 
-members = members.sort(() => 0.5 - Math.random());
+    const shuffled = qualifiedMembers.sort(() => 0.5 - Math.random());
 
-const spotlight = members.slice(0,3);
+    const selected = shuffled.slice(0, 3);
 
-const container = document.getElementById("spotlight-container");
+    spotlightContainer.innerHTML = "";
 
-spotlight.forEach(member => {
+    selected.forEach(member => {
+      const card = document.createElement("section");
+      card.classList.add("spotlight-card");
 
-let card = document.createElement("div");
+      card.innerHTML = `
+        <h3>${member.name}</h3>
+        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+        <p><strong>Phone:</strong> ${member.phone}</p>
+        <p><strong>Address:</strong> ${member.address}</p>
+        <p><strong>Membership:</strong> ${member.membership === 3 ? "Gold" : "Silver"}</p>
+        <a href="${member.website}" target="_blank">Visit Website</a>
+      `;
 
-card.innerHTML = `
-<h3>${member.name}</h3>
-<img src="${member.logo}" alt="${member.name}">
-<p>${member.address}</p>
-<p>${member.phone}</p>
-<a href="${member.website}" target="_blank">Visit Website</a>
-<p>${member.membership} Member</p>
-`;
+      spotlightContainer.appendChild(card);
+    });
 
-container.appendChild(card);
-
-});
-
+  } catch (error) {
+    console.error("Spotlight Error:", error);
+    spotlightContainer.innerHTML = "<p>Unable to load spotlights.</p>";
+  }
 }
 
 loadSpotlights();
