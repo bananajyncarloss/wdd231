@@ -147,27 +147,39 @@ section {
 }
 
 /* =======================
-     INDEX PAGE GRID
-  ======================= */
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-  }
+   INDEX PAGE SECTIONS
+======================= */
+.events ul {
+  padding-left: 1.2rem;
+}
 
-  .events {
-    grid-column: 1 / 2;
-  }
+.weather {
+  background-color: var(--gray);
+  padding: 1rem;
+  border-radius: 8px;
+}
 
-  .weather {
-    grid-column: 2 / 3;
-  }
+.spotlights {
+  padding: 1rem;
+}
 
-  .spotlights {
-    grid-column: 1 / -1;
-  }
+#spotlight-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.spotlight-card {
+  background: #e6f0ff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.spotlight-card img {
+  max-width: 120px;
+  margin: 0.5rem auto;
+}
+
 
 /* =======================
    FOOTER
