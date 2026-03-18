@@ -8,7 +8,7 @@ async function loadSpotlights() {
 
     const data = await response.json();
 
-    const qualifiedMembers = data.filter(
+    const qualifiedMembers = data.members.filter(
       member => member.membership === 2 || member.membership === 3
     );
 

@@ -1,10 +1,11 @@
 
-  [
-    {
-      "name": "Alliance Software, Inc.",
-      "address": "14th Floor, Buildcomm Center, Sumilon Road, Cebu Business Park, Cebu City",
-      "phone": "(6332) 261-1705",
-      "website": "https://alliance.com.ph",
+  {
+    "members": [
+      {
+        "name": "Alliance Software, Inc.",
+        "address": "14th Floor, Buildcomm Center, Sumilon Road, Cebu Business Park, Cebu City",
+        "phone": "(6332) 261-1705",
+        "website": "https://alliance.com.ph",
       "image": "business-1.png",
       "membership": 3
     },
@@ -57,3 +58,4 @@
       "membership": 3
     }
   ]
+}
