@@ -2,9 +2,21 @@ const url = "data/members.json";
 const container = document.querySelector("#members");
 
 async function getMembers() {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMembers(data.members);
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("Fetch failed: " + response.status);
+        }
+
+        const data = await response.json();
+        console.log(data); // 👈 DEBUG
+
+        displayMembers(data.members);
+
+    } catch (error) {
+        console.error("ERROR:", error);
+    }
 }
 
 function displayMembers(members) {
