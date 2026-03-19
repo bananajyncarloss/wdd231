@@ -21,15 +21,6 @@
 grid-template-columns: repeat(3, 1fr);
 }
 
-#menu-btn {
-    display: none;
-  }
-
-  #nav-menu {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  }
 
  /* =======================
      HERO
