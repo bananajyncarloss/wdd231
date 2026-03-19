@@ -32,6 +32,7 @@
 <script src="scripts/weather.js" defer></script>
 <script src="scripts/spotlight.js" defer></script>
 <script src="scripts/dates.js" defer></script>
+<script src="scripts/navigation.js" defer></script>
 </head>
 
 <body>
@@ -39,8 +40,10 @@
 <header>
   <div class="logo-area">
     <img src="images/logo.png" alt="Cebu Chamber Logo">
-    <span>Cebu City Chamber of Commerce</span>
+    <title>Cebu City Chamber of Commerce</title>
   </div>
+
+  <button id="menu-btn" aria-label="Toggle Menu">☰</button>
 
   <nav>
     <a href="index.html" class="active">Home</a>
@@ -51,10 +54,10 @@
 </header>
 
 <section class="hero">
-  <h2 class="visually-hidden">Cebu City Chamber Hero</h2>
+  <h1 class="visually-hidden">Cebu City Chamber Hero</h1>
 
   <img src="images/hero-image.webp" alt="Cebu City Skyline">
-  <button class="cta">Explore Cebu Businesses</button>
+  <button type="button" class="cta">Explore Cebu Businesses</button>
 </section>
 
 <main>
