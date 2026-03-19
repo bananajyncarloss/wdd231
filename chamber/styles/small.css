@@ -33,14 +33,6 @@ header {
   padding: 1rem;
 }
 
-#menu-btn {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: block;
-}
-
 .logo-area {
   display: flex;
   align-items: center;
@@ -74,7 +66,6 @@ nav a:hover,
 nav a.active {
   background-color: rgb(0, 52, 82);
 }
-
 
 #members.grid {
 display: grid;
@@ -128,7 +119,7 @@ display: none;
   position: absolute;
   bottom: 1.5rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background-color: var(--secondary);
   color: var(--dark);
   padding: 0.75rem 1.5rem;

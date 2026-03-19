@@ -19,22 +19,6 @@
 grid-template-columns: repeat(3, 1fr);
 }
 
- /* =======================
-     HERO
-  ======================= */
-  .hero {
-    max-height: 500px;
-  }
-
-  .hero img {
-    height: 500px;
-  }
-
-  .cta {
-    bottom: 2.5rem;
-    font-size: 1.1rem;
-  }
-  
 /* =======================
      INDEX PAGE GRID
   ======================= */
