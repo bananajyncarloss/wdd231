@@ -4,7 +4,7 @@ const container = document.querySelector("#members");
 async function getMembers() {
     const response = await fetch(url);
     const data = await response.json();
-    displayMembers(data);
+    displayMembers(data.members);
 }
 
 function displayMembers(members) {
