@@ -60,7 +60,6 @@ grid-template-columns: repeat(3, 1fr);
   .footer-right {
     text-align: right;
   }
-}
 
   /* ===========================
      JOIN PAGE FIX
@@ -71,4 +70,4 @@ grid-template-columns: repeat(3, 1fr);
     grid-template-columns: 2fr 1fr;
     align-items: start;
   }
-
+}
