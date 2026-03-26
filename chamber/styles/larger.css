@@ -1,5 +1,10 @@
 @media (min-width: 48rem) {
 
+  .join-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+
   /* =======================
      HEADER & NAV
   ======================= */
@@ -60,14 +65,5 @@ grid-template-columns: repeat(3, 1fr);
   .footer-right {
     text-align: right;
   }
-
-  /* ===========================
-     JOIN PAGE FIX
-  =========================== */
-
-
-  .join-layout {
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
-  }
+  
 }
